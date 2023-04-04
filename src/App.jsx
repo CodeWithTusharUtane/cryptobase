@@ -8,6 +8,8 @@ import SignIn from './routes/SignIn'
 import SignUp from './routes/SignUp'
 import Account from './routes/Account'
 import axios from 'axios'
+import CoinPage from './routes/CoinPage'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -30,7 +32,11 @@ const App = () => {
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/account' element={<Account/>}/>
+        <Route path='/coin/:coinId' element={<CoinPage/>}>
+          <Route path=':coinId'/>
+        </Route>
       </Routes>
+      <Footer/>
     </ThemeProvider>
   )
 }
