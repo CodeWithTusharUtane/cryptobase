@@ -1,10 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import CoinItem from "./CoinItem";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-const CoinSearch = ({ coins }) => {
+const CoinSearch = () => {
 
     const [searchText, setSearchText] = useState('');
+    const [coins, setCoins] = useState([]);
+    const [page, setPage] = useState(1);
+
+    
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=10&page=${page}&sparkline=true&locale=en`
+
+  useEffect(()=>{
+    axios.get(url).then((response)=>{
+      setCoins(response.data)
+
+    })
+  },[url])
+
+  const goNext = () =>  {
+    setPage(page+1)
+  }
+  const goPrev = () => {
+    if(page > 1){
+      setPage(page-1)
+    }
+    else{
+      toast.error("cannot go backward than this page.")
+    }
+  }
  
   return (
     <div className="rounded-div my-4 font-poppins">
@@ -43,6 +69,10 @@ const CoinSearch = ({ coins }) => {
           ))}
         </tbody>
       </table>
+      <div className="flex items-center justify-center">
+        <button onClick={goPrev} className="bg-button text-btnText px-4 p-2 text-center m-2 rounded-full shadow-xl hover:shadow-2xl">Previous</button>
+        <button onClick={goNext} className="bg-button text-btnText px-4 p-2 text-center m-2 rounded-full shadow-xl hover:shadow-2xl">Next</button>
+      </div>
     </div>
   );
 };

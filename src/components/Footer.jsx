@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ThemeToggle from './ThemeToggle'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebookF, FaGithub, FaTiktok, FaTwitter } from 'react-icons/fa'
+import { toast } from 'react-toastify'
 
 const Footer = () => {
+
+  const [input, setInput] = useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast.success('Thank you for Subscription')
+    setInput('')
+  }
+
   return (
     <div className='rounded-div mt-8 pt-8 text-primary font-poppins'>
         <div className="grid md:grid-cols-2 ">
@@ -35,9 +44,9 @@ const Footer = () => {
                 </div>
                 <p className='text-center md:text-right '>Sign up for crypto news</p>
                 <div className="py-4">
-                  <form>
-                    <input className='bg-primary border border-input p-2 mr-2 w-full shadow-xl text-center rounded-full md:w-auto' type="email" placeholder='Enter your email'/>
-                    <button className='bg-button text-btnText px-4 p-2 w-full  rounded-full shadow-xl hover:shadow-2xl md:w-auto my-2 lg:mr-16'>Sign up</button>
+                  <form onSubmit={handleSubmit}>
+                    <input  onChange={(e)=>setInput(e.target.value)} value={input} className='bg-primary border border-input p-2 mr-2 w-full shadow-xl text-center rounded-full md:w-auto' type="email" placeholder='Enter your email'/>
+                    <button type='submit' onClick={handleSubmit} className='bg-button text-btnText px-4 p-2 w-full  rounded-full shadow-xl hover:shadow-2xl md:w-auto my-2 lg:mr-16'>Sign up</button>
                   </form>
                 </div>
                 <div className="flex py-4 justify-between text-accent text-2xl ">
