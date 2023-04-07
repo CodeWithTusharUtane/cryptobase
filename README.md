@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# CRYPTOBASE🪙
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About Project
+Cryptobase is Frontend based Webapp.\
+Cryptobase is an crypto currencies app where you can check the realtime information of any coin and this app is powered with Firebase(BaaS) so you can save your favorite coin for future updates. This app is created with Coingecko Api which provides realtime updates, In this app 2 API's are used for 2 different tasks in which Trending coins and Information of all the coin market include. There is authentication service is available so your data of favorite coins will not be visible to anyone because it is end to end encrypted. There are many such features you can explore from the link given below.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Check live project
+[👉Live Demo](https://cryptobase-rho.vercel.app/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Build With
+» React v18\
+» Firebase v9 (BaaS)\
+» TailwindCSS v3
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Packages Used
+1. React Router Dom
+2. React Icons
+3. React Toastify
+4. React loading
+5. React Axios
+6. React Sparklines
+7. React Dompurify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots of the Project👇
+![1](https://user-images.githubusercontent.com/89387408/230577136-a92cab50-e89b-4ccf-9e61-3f7fa2886539.png)
+![2](https://user-images.githubusercontent.com/89387408/230577182-9ed7c972-76f0-4439-85b5-7ae1f687a88f.png)
+![3](https://user-images.githubusercontent.com/89387408/230577201-70724b3e-4f2f-4c51-8159-689fa66abb6d.png)
+![4](https://user-images.githubusercontent.com/89387408/230577227-6db652fd-e5a2-46b9-acbe-92413f961ce6.png)
