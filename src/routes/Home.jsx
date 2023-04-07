@@ -4,7 +4,7 @@ import Trending from '../components/Trending'
 
 const Home = ({coins}) => {
   return (
-    <div>
+    <div className='font-poppins'>
       <CoinSearch coins={coins}/>
       <Trending/>
     </div>

@@ -22,7 +22,7 @@ const Account = () => {
 
     
     return (
-      <div className='mx-w-[1140px] mx-auto'>
+      <div className='mx-w-[1140px] mx-auto font-poppins'>
       <div className='flex justify-between items-center my-12 py-8 rounded-div'>
         <div>
           <h1 className='text-2xl font-bold'>

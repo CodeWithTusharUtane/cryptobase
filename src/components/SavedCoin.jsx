@@ -29,7 +29,7 @@ const SavedCoin = () => {
   }
 
   return (
-    <div>
+    <div className="font-poppins">
       {coins?.length === 0 ? (
         <p>
           You don't have any coins saved. Please save a coin to add it to the

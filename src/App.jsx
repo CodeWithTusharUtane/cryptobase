@@ -11,6 +11,8 @@ import axios from 'axios'
 import CoinPage from './routes/CoinPage'
 import Footer from './components/Footer'
 import { AuthContextProvider } from './context/AuthContext'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -39,6 +41,7 @@ const App = () => {
         </Route>
       </Routes>
       <Footer/>
+      <ToastContainer />
       </AuthContextProvider>
     </ThemeProvider>
   )

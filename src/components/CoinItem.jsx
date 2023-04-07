@@ -5,6 +5,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../Firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 
 const CoinItem = ({coin}) => {
@@ -28,12 +29,12 @@ const CoinItem = ({coin}) => {
         })
       });
     }else{
-      alert('Please sign in to save a coin to your watch list.')
+      toast.info('Please sign in to save a coin to your watch list.')
     }
   }
 
   return (
-      <tr className="h-[80px] border-b overflow-hidden">
+      <tr className="h-[80px] border-b overflow-hidden font-poppins">
         <td onClick={saveCoin} className="hover:cursor-pointer">
           {
             savedCoin ? <AiFillStar/> : <AiOutlineStar/>

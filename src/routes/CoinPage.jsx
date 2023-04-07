@@ -4,23 +4,31 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { FaTwitter, FaFacebook, FaGithub, FaReddit } from "react-icons/fa";
 import DOMPurify from "dompurify";
 import { useParams } from "react-router-dom";
+import p1 from '../assests/ethereum.webp'
 
 const CoinPage = () => {
-
-  const params = useParams()
-  
+  const params = useParams();
+  const [loading, setLoading] = useState(false);
   const [coin, setCoin] = useState({});
-  const url =
-    `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
+  const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
   useEffect(() => {
+    setLoading(true);
     axios.get(url).then((response) => {
       setCoin(response.data);
-      console.log(response.data);
+      // console.log(response.data);
+      setLoading(false);
     });
   }, [url]);
 
   return (
-    <div className="rounded-div my-12 py-8">
+    <>
+    {loading ? (
+      <div className="rounded-div flex items-center justify-center">
+        <img src={p1} alt="" className='animate-spin'/>
+      </div>
+    ): (
+    <div className="rounded-div my-12 py-8 font-poppins">
+
       <div className="flex py-8 ">
         <img className="w-20 mr-8" src={coin.image?.large} alt="/" />
         <div className="">
@@ -33,7 +41,10 @@ const CoinPage = () => {
         <div className="">
           <div className="flex justify-between">
             {coin.market_data?.current_price ? (
-              <p className="text-3xl font-bold"> ₹{coin.market_data.current_price.inr.toLocaleString()}</p>
+              <p className="text-3xl font-bold">
+                {" "}
+                ₹{coin.market_data.current_price.inr.toLocaleString()}
+              </p>
             ) : null}
             <p>7 Day</p>
           </div>
@@ -139,7 +150,7 @@ const CoinPage = () => {
             </div>
           </div>
 
-          <div className="flex justify-around  p-8 text-accent">
+          <div className="flex justify-around  p-8 text-accent text-2xl">
             <FaTwitter />
             <FaFacebook />
             <FaReddit />
@@ -160,6 +171,9 @@ const CoinPage = () => {
         ></p>
       </div>
     </div>
+    )}
+
+    </>
   );
 };
 

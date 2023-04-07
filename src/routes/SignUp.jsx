@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,9 +22,9 @@ const SignUp = () => {
   }  
 
   return (
-    <div>
+    <div className="font-poppins">
       <div className="max-w-[400px] mx-auto min-h-[600px] px-4 py-20">
-        <h1 className="text-2xl font-bold">Sign Up</h1>
+        <h1 className="text-2xl font-bold lg:text-6xl lg:pb-10">Sign Up</h1>
         {error ? <p className="bg-red-300 p-3 my-2 ">{error}</p> : null}
         <form onSubmit={handleSubmit}>
           <div className="my-4 ">
@@ -33,7 +33,7 @@ const SignUp = () => {
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                className="w-full p-2 bg-primary border border-input rounded-2xl"
+                className="outline-none w-full p-2 bg-primary border border-input rounded-full"
               />
               <AiOutlineMail className="absolute right-2 top-3 text-gray-400" />
             </div>
@@ -44,12 +44,12 @@ const SignUp = () => {
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
-                className="w-full p-2 bg-primary border border-input rounded-2xl"
+                className="outline-none w-full p-2 bg-primary border border-input rounded-full"
               />
               <AiFillLock className="absolute right-2 top-3 text-gray-400" />
             </div>
           </div>
-          <button className="w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl">
+          <button className="w-full my-2 p-3 bg-button text-btnText rounded-full shadow-xl font-bold">
             Sign up
           </button>
         </form>

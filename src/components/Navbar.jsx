@@ -26,7 +26,7 @@ const Navbar = () => {
     }
 
   return (
-    <div className='rounded-div flex items-center justify-between h-20 font-bold'>
+    <div className='rounded-div flex items-center justify-between h-20 font-bold font-poppins'>
         <Link to='/'>
             <h1 className='text-2xl'>Cryptobase</h1>
         </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to='/signin' className='p-4 hover:text-accent'> 
                 Sign In
             </Link>
-            <Link to='/signup' className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'> 
+            <Link to='/signup' className='bg-button text-btnText px-5 py-2 ml-2 rounded-full shadow-lg hover:shadow-2xl'> 
                 Sign Up
             </Link>
         </div>)
@@ -71,10 +71,10 @@ const Navbar = () => {
             </ul>
             <div className="flex flex-col w-full p-4">
                 <Link to='/signin'>
-                    <button onClick={handleNav} className='w-full my-2 p-3 bg-primary text-primary border border-secondary rounded-2xl shadow-xl'>Sign In</button>
+                    <button onClick={handleNav} className='w-full my-2 p-3 bg-primary text-primary border border-secondary rounded-full shadow-xl'>Sign In</button>
                 </Link>
                 <Link to='/signup'>
-                    <button onClick={handleNav} className='w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl'>Sign Up</button>
+                    <button onClick={handleNav} className='w-full my-2 p-3 bg-button text-btnText rounded-full shadow-xl'>Sign Up</button>
                 </Link>
             </div>
         </div>

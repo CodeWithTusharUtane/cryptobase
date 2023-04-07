@@ -5,7 +5,7 @@ import { FaFacebookF, FaGithub, FaTiktok, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='rounded-div mt-8 pt-8 text-primary'>
+    <div className='rounded-div mt-8 pt-8 text-primary font-poppins'>
         <div className="grid md:grid-cols-2 ">
           <div className="flex justify-evenly w-full md:max-w-[300px] uppercase">
             <div className="">
@@ -36,11 +36,11 @@ const Footer = () => {
                 <p className='text-center md:text-right '>Sign up for crypto news</p>
                 <div className="py-4">
                   <form>
-                    <input className='bg-primary border border-input p-2 mr-2 w-full shadow-xl rounded-2xl md:w-auto' type="email" placeholder='Enter your email'/>
-                    <button className='bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-xl hover:shadow-2xl md:w-auto my-2'>Sign up</button>
+                    <input className='bg-primary border border-input p-2 mr-2 w-full shadow-xl text-center rounded-full md:w-auto' type="email" placeholder='Enter your email'/>
+                    <button className='bg-button text-btnText px-4 p-2 w-full  rounded-full shadow-xl hover:shadow-2xl md:w-auto my-2 lg:mr-16'>Sign up</button>
                   </form>
                 </div>
-                <div className="flex py-4 justify-between text-accent ">
+                <div className="flex py-4 justify-between text-accent text-2xl ">
                   <AiOutlineInstagram/>
                   <FaTiktok/>
                   <FaTwitter/>
@@ -51,7 +51,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className='text-center py-4'>Powered by Coin Gecko</p>
     </div>
   )
 }
