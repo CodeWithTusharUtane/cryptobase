@@ -16,7 +16,6 @@ const CoinSearch = () => {
   useEffect(()=>{
     axios.get(url).then((response)=>{
       setCoins(response.data)
-
     })
   },[url])
 

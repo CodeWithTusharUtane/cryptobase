@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { AiFillLock, AiOutlineMail } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom'
-import {UserAuth, signIn} from '../context/AuthContext'
+import {UserAuth} from '../context/AuthContext'
+import { toast } from 'react-toastify'
 
 const SignIn = () => {
 
@@ -17,6 +18,7 @@ const SignIn = () => {
     try {
       await signIn(email, password)
       navigate('/account')
+      toast.success('Sign in successfull')
     } catch (error) {
       setError(error.message)
       console.log(error.message)

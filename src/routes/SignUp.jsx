@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiFillLock, AiOutlineMail } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   // const navigate = useNavigate();
@@ -15,6 +16,7 @@ const SignUp = () => {
     setError('')
     try{
       await signUp(email, password)
+      toast.success('Sign in successfull')
     }catch(e){
       setError(e.message)
       console.log(e.message)
