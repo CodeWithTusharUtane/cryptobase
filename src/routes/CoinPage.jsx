@@ -4,7 +4,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import { FaTwitter, FaFacebook, FaGithub, FaReddit } from "react-icons/fa";
 import DOMPurify from "dompurify";
 import { useParams } from "react-router-dom";
-import p1 from "../assests/ethereum.webp";
+import p1 from "../assests/1.webp";
 
 const CoinPage = () => {
 	const params = useParams();
@@ -24,7 +24,7 @@ const CoinPage = () => {
 		<>
 			{loading ? (
 				<div className="rounded-div flex items-center justify-center">
-					<img src={p1} alt="" className="animate-spin" />
+					<img src={p1} alt="" className="animate-spin w-[700px] h-[700px]" />
 				</div>
 			) : (
 				<div className="rounded-div my-12 py-8 font-poppins">
