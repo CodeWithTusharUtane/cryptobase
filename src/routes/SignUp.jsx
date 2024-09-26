@@ -16,6 +16,7 @@ const SignUp = () => {
 		setError("");
 		try {
 			await signUp(email, password);
+			navigate("/account");
 			toast.success("Sign up successfull");
 		} catch (e) {
 			setError(e.message);
