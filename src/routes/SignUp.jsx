@@ -11,6 +11,8 @@ const SignUp = () => {
 	const [error, setError] = useState("");
 	const { signUp } = UserAuth();
 
+	const navigate = useNavigate();
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setError("");
